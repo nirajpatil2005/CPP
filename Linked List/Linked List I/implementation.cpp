@@ -69,8 +69,16 @@ class linked_list
             cout<<"Invalid Idx";
             return -1;
         }
-        else if(idx==0) return head.val;
-        else if(idx==size-1) return tail.val;
+        else if(idx==0) return head->val;
+        else if(idx==size-1) return tail->val;
+        else{
+            node* temp=head;
+            for(int i=1;i<=idx;i++)
+            {
+                temp=temp->next;
+            }
+            return temp->val; 
+        }
         
 
     }
@@ -99,6 +107,8 @@ int main(){
     cout<<"insert at beginnig: ";ll.display();
     ll.insert_at_idx(2,90);
     cout<<"inserted at 2nd idx: ";ll.display();
-    cout<<" ";
+    ll.insert_at_idx(4,60);
+    cout<<"inserted at 4th idx: ";ll.display();
+    cout<<"element on 2nd idx:"<<ll.getAtIdx(2);
     return 0;
 }
