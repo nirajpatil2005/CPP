@@ -100,16 +100,46 @@ public:
     }
     void deleteAtTail()
     {
-        if(size==0)
+        if (size == 0)
         {
-            cout<<"ll is empty";
+            cout << "ll is empty";
         }
-        node* temp=head;
-        while(temp->next!=tail)
+        node *temp = head;
+        while (temp->next != tail)
         {
-            temp=temp->next;
+            temp = temp->next;
         }
-        temp->next=NULL;
+        temp->next = NULL;
+    }
+    void deleteAtIdx(int idx)
+    {
+        if (size == 0)
+        {
+            cout << "list is empty";
+            return;
+        }
+        else if (idx < 0 || idx >= size)
+        {
+            cout << "invalid idx";
+            return;
+        }
+        else if (idx == 0)
+        {
+            return deleteAtHead();
+        }
+        else if (idx == size - 1)
+        {
+            return deleteAtTail();
+        }
+        else
+        {
+            node *temp = head;
+            for (int i = 1; i <= idx - 1; i++)
+            {
+                temp = temp->next;
+            }
+            temp->next = temp->next->next;
+        }
     }
     void display()
     {
@@ -144,12 +174,15 @@ int main()
     ll.insert_at_idx(4, 60);
     cout << "inserted at 4th idx: ";
     ll.display();
-    cout << "element on 2nd idx:" << ll.getAtIdx(2)<<endl;
+    cout << "element on 2nd idx:" << ll.getAtIdx(2) << endl;
     ll.deleteAtHead();
-    cout<<"1st element is deleted: ";
+    cout << "1st element is deleted: ";
     ll.display();
     ll.deleteAtTail();
-    cout<<"element is deleted at last: ";ll.display();
-    
+    cout << "element is deleted at last: ";
+    ll.display();
+    ll.deleteAtIdx(4);
+    cout << "element of 4th idx deleted: ";
+    ll.display();
     return 0;
 }
