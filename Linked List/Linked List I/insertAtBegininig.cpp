@@ -34,6 +34,10 @@ void insert_at_end(node* head,int val)
     while(head->next!=NULL) head=head->next;
     head->next=t;
 }
+void insert_at_beginning(int val)
+{
+    
+}
    
 int main()
 {
@@ -53,5 +57,6 @@ int main()
     cout<<"actual ll: ";display(a);cout<<endl;
     cout<<"revese of ll : ";revDisp(a);cout<<endl;
     insert_at_end(a,80);
-    cout<<"insert at end: ";display(a);
+    cout<<"insert at end: ";display(a);cout<<endl;
+
 }
