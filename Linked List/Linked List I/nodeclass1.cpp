@@ -33,7 +33,7 @@ int main()
     cout<<(a.next)->val<<endl;
     a.next->val=70;
     cout<<(*(a.next)).val<<endl;
-
+   
 
 
 }
