@@ -71,39 +71,59 @@ public:
                 current = current->next;
             }
             temp->next = current->next;
-            current->next =temp;
+            current->next = temp;
 
+        }
+        
             size++;
-        }
     }
-
-    void display()
-    {
-
-        node *temp = head;
-        while (temp != NULL)
+        void get_at_idx(int idx)
         {
-            cout << temp->val << " ";
-            temp = temp->next;
+            if (idx < 0 || idx >= size)
+            {
+                cout << "Invalid Index";
+            }
+            if(idx==0)
+            cout<<head->val;
+            else
+            {
+                node *current = head;
+                for (int i = 0; i < idx; i++)
+                {
+                    current = current->next;
+                }
+                cout << current->val;
+            }
+            cout<<endl;
         }
-        cout << endl;
+        void display()
+        {
+
+            node *temp = head;
+            while (temp != NULL)
+            {
+                cout << temp->val << " ";
+                temp = temp->next;
+            }
+            cout << endl;
+        }
+    };
+
+    int main()
+    {
+        linkedlist ll;
+        ll.insert_at_end(12);
+        ll.insert_at_end(0);
+        ll.display();
+        ll.insert_at_end(32);
+        ll.insert_at_end(38);
+        ll.insert_at_end(31);
+        ll.display();
+        ll.insert_at_beginning(10);
+        ll.display();
+        ll.insert_at_idx(2, 56);
+        ll.display();
+        ll.get_at_idx(1);
+
+        return 0;
     }
-};
-
-int main()
-{
-    linkedlist ll;
-    ll.insert_at_end(12);
-    ll.insert_at_end(0);
-    ll.display();
-    ll.insert_at_end(32);
-    ll.insert_at_end(38);
-    ll.insert_at_end(31);
-    ll.display();
-    ll.insert_at_beginning(10);
-    ll.display();
-    ll.insert_at_idx(2, 56);
-    ll.display();
-
-    return 0;
-}
