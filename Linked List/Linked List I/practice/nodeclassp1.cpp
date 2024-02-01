@@ -124,6 +124,10 @@ public:
         ll.insert_at_idx(2, 56);
         ll.display();
         ll.get_at_idx(1);
+        ll.insert_at_end(30);
+        ll.display();
+        ll.insert_at_beginning(40);
+        ll.display();
 
         return 0;
     }
