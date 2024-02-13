@@ -25,18 +25,30 @@ void printpath(int sr, int sc, int er, int ec, string s)
 }
 int maze2(int row, int col)
 {
-    if (row < 1 || col < 1) return 0;   
+    if (row < 1 || col < 1) return 0;
     if (row ==1 &&  col==1) return 1;
     int rightway = maze2(row, col - 1);
     int downway = maze2(row - 1, col);
     int totalway = rightway + downway;
     return totalway;
 }
-
+void maze3(int row, int col,string s)
+{
+    if (row < 1 || col < 1) return ;
+    if (row ==1 &&  col==1) 
+    {
+        cout<<s<<endl;
+        return;
+    };
+    maze3(row, col - 1,s+'R');
+    maze3(row - 1, col,s+'D');
+   
+}
 int main()
 {
     //  cout<<maze(0,0,2,2);
     printpath(1, 1, 3, 3, "");
     cout << maze2(3, 3);
+    maze3(3,3,"");
     return 0;
 }
