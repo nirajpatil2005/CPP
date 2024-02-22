@@ -130,7 +130,7 @@ int main()
     ll.display();
     ll.insertatidx(4,70);
     ll.display();
-    ll.deleteatidx(3);
+    ll.deleteatidx(0);
     ll.display();
     return 0;
 }

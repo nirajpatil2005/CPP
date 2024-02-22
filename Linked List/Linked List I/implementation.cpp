@@ -51,7 +51,7 @@ class linked_list
         else{
             node* t= new node(val);
             node* temp=head;
-            for(int i=1;i<=idx;i++)
+            for(int i=1;i<=idx-1;i++)
             {
                 temp=temp->next;
             }

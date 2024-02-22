@@ -37,7 +37,7 @@ class linkedlist
 
 };
 int main(){
-    linkedlist ll;
+    linkedlist* ll=new linkedlist;
     node* a=new node(140);
     node* b=new node(1300);
     node* c=new node(101);
@@ -47,6 +47,6 @@ int main(){
     b->next=c;
     c->next=d;
     d->next=e;
-    ll.display(a);
+    ll->display(a);
     return 0;
 }

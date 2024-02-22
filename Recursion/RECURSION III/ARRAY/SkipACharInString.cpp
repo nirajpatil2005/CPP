@@ -22,7 +22,7 @@ void removechar(string ans, string original,int idx)
         return;
     }
     char ch = original[idx];
-    if (ch == 'N')
+    if (ch == 'A')
         removechar(ans, original,idx+1);
     else
         removechar(ans + ch, original,idx+1);
