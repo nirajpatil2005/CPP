@@ -17,7 +17,7 @@ void display(stack<int> &st)
         return;
     int x = st.top();
     st.pop();
-    disrev_rec(st);
+    display(st);
     cout << x << " ";
     st.push(x);
 }
@@ -30,6 +30,8 @@ int main()
     st.push(16);
     st.push(18);
     st.push(20);
+    display(st);
+    cout<<endl;
     disrev_rec(st);
     return 0;
 }

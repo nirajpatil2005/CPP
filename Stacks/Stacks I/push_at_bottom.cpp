@@ -30,7 +30,7 @@ void pushAtBottom(stack<int> &st,int ele)
         st.push(temp.top());
         temp.pop();
     }
-
+  
 }
 int main()
 {
