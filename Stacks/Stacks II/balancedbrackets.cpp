@@ -13,12 +13,15 @@ bool isbalnced(string s)
         }
         else
         {
-            if(st.size()==0)return true;
-            else return false;
+            if(st.size()==0)return false;
+            else  st.pop();
         }
     }
+    if(st.size()==0)return true;
+    else return false;
 }
 int main(){
-    
+    string s="((((()))))";
+    cout<<isbalnced(s);
     return 0;
 }
