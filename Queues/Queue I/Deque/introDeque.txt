@@ -1,0 +1,5 @@
+Doubly linked list implementation
+in both sides we can do push anf=d pop opertions 
+such as front and rear
+
+O(1) time complexity
