@@ -40,5 +40,10 @@ int main()
     removeEven(q);
     q.push(100);
     display(q);
+    q.push(15);
+    q.push(18);
+    q.push(19);
+display(q);
+removeEven(q);
     return 0;
 }
