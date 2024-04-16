@@ -1,0 +1,31 @@
+prequisites 
+1->linked list
+2->recursion
+
+trees darta structure 
+representation
+terminology
+imp properties
+types of trees 
+applications of tree data structure
+what is binary tree
+implmentation
+traversals
+probkems
+types of binary trees
+
+Types of tree
+1->Generic tree:
+    multiple children
+2->Binary Tree:
+    upto to child nodes
+3->binary search trees:
+    binary search trees with some special properties
+
+ 1 full binarytree= having 0 or 2 nodes
+ 2  perfect binary tree =every nodes has 2 childs except 
+                     last level leaf nodes
+ 3 complete binary tree: last level is not completed
+ 4 balanced binary tree: for every node the diffrence between the levels
+                         of LST and RST should be atmost 1
+    LST=left sub tree RST-right sub tree
