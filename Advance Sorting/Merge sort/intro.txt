@@ -1,0 +1,5 @@
+bubble sort o(n^2)
+selection sort o(n^2)
+insertion sort o(n^2)
+mergr sort o(n.logn)
+quick sorto(n.logn)
