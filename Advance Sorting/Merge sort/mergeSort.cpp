@@ -8,9 +8,9 @@ void merge(vector<int>&a, vector<int>&b,vector<int>&res)
     int k=0;//res
     while(i<a.size() && j<b.size())
     {
-        if(a[i]>b[j]) res[k++]=b[j++];//j++;
+        if(a[i]<=b[j]) res[k++]=a[i++];//j++;//tp stable merge
     
-        else res[k++]=a[i++];//  i++;
+        else res[k++]=b[j++];//  i++;
         
         //k++;
     }
