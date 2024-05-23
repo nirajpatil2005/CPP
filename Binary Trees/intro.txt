@@ -27,5 +27,6 @@ Types of tree
                      last level leaf nodes
  3 complete binary tree: last level is not completed
  4 balanced binary tree: for every node the diffrence between the levels
-                         of LST and RST should be atmost 1
+                         of LST and RST should be 
+                         atmost 1
     LST=left sub tree RST-right sub tree

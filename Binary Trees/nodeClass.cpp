@@ -70,10 +70,8 @@ int main()
     c->right = g;
     node *root = a;
     display(a);
-    cout << endl
-         << sum(a);
-    cout << endl
-         << size(a) << endl;
+    cout<<endl<<"SUM:"<< sum(a)<<endl;
+    cout<<"Size:"<< size(a) << endl;
     cout<<"max val of trees node:"<<maxval(a)<<endl;
     cout<<"Product of nodes:"<<product(a)<<endl;
     cout<<"min val of trees node:"<<minval(a)<<endl;
