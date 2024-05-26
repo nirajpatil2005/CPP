@@ -21,7 +21,7 @@ void postorder(node* root) // pre in post (pip)
      //cout<<root->val<<" ";//in ordrr
     postorder(root->right);//call 2
     cout<<root->val<<" ";//post order
-}
+} 
 int main()
 {
     node *a = new node(1); // root node
