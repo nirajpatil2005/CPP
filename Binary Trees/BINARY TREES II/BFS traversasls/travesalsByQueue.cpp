@@ -1,5 +1,6 @@
 #include<iostream>
 #include<climits>
+#include<queue>
 using namespace std;
 class node
 {
@@ -38,8 +39,23 @@ void levelOrder(node* root)
         nthlevel(root,1,i);
         cout<<endl;
     }
+}
+void levelOrderByQueue(node* root)
+{
+   queue<node*> q;
+    q.push(root);
+    while(!q.empty())
+    {
+        node* temp=q.front();
+        q.pop();
+        cout<<temp->val<<" ";
+        if(temp->left!=nullptr)q.push(temp->left);
+        if(temp->right!=nullptr)q.push(temp->right);
+    }
+    cout<<endl;
 
 }
+
 int main()
 {
     node *a = new node(1); // root node
@@ -56,8 +72,5 @@ int main()
     c->left = f;
     c->right = g;
     node *root = a;
-//     nthlevel(a,1,3);
-//    cout<<endl<< levels(a)<<endl;
-    levelOrder(a);
-
+    levelOrderByQueue(a);
 }
