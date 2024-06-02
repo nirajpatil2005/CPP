@@ -1,0 +1,5 @@
+can bst contain duplicate elements??
+-> no but,
+lst<root-val<rst
+//lst:- left search tree
+lst<=root->val<rst for only bst//binary search tree
