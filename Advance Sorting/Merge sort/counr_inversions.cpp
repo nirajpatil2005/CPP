@@ -1,7 +1,8 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-//brutforce
+//brutforce 
+//naive approach
 void count_inversion(vector<int>arr)//bruteforce method
 {
     int count=0;

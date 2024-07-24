@@ -8,10 +8,10 @@ void pip(int n)
     cout<<"In "<<n<<endl;
     pip(n-1);
     cout<<"Post "<<n<<endl;
-    // pip(n-1);
+    pip(n-1);
 }
 int main()
 {
-    pip(3);
+    pip(2);
     return 0;
 }
