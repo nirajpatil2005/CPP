@@ -33,7 +33,6 @@ void dfs(int curr, int end, vector<int> &path)
     path.push_back(curr);
     if (curr == end)
     {
-        path.push_back(curr);
         result.push_back(path);
         path.pop_back();
         return;
