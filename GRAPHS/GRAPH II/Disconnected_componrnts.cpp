@@ -84,7 +84,7 @@ public:
             cout<<endl;
         }
     }
-};
+};  
 int main()
 {
     Graph graph(10);
