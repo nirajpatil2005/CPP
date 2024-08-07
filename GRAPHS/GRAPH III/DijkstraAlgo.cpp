@@ -23,7 +23,7 @@ void dijkstra(int src, vector<vector<Edge>> graph, int V)
     {
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq; // min heap
         vector<int>dist(V,INT_MAX);
-        pq.push(make_pair(0,1));
+        pq.push(make_pair(0,src));
         dist[src]=0;
         while(!pq.empty())
         {
