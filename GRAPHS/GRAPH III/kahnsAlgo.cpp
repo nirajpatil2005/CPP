@@ -49,7 +49,7 @@ public:
             }
         }
     }
-    void kahnAlgo()
+    void kahnAlgo()//for finding topology order
     {
         vector<int> indeg(V, 0);
         calcIndegree(indeg);
