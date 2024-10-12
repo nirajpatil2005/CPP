@@ -1,0 +1,10 @@
+Dynamic Programming 
+--optimized recursion
+
+
+Type of DP:
+
+memoization             tabulation
+recursive               iterative
+top down                bottom up
+large to small          small to large
