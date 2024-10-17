@@ -92,7 +92,7 @@ int main()
     graph.addEdge(5, 0);
     graph.addEdge(5, 2);
     vector<int> vec(6, 0);
-    graph.calcIndegree(vec);
+    graph.calcIndegree(vec); 
     for (int ele : vec)
     {
         cout << ele << " ";

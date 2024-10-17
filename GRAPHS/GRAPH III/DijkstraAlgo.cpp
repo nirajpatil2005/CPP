@@ -40,7 +40,7 @@ void dijkstra(int src, vector<vector<Edge>> graph, int V)
                 }
             }
          }
-         for(int d:dist)
+         for(int d:dist) 
          {
             cout<<d<<" ";
          }

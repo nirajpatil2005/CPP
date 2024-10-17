@@ -1,3 +1,7 @@
+//Algorithm for finding minimum dpannig tree
+//for connected undirected graph
+
+
 #include <iostream>
 #include <vector>
 #include <list>

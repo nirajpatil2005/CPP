@@ -68,7 +68,7 @@ int main()
     graph.addEdge(3, 5);
     graph.addEdge(4, 5);
     graph.addEdge(5, 6);
-    graph.print();
-    cout << endl;
+    // graph.print();
+    cout << endl<<"BFS OF GRAPH:";
     graph.BFS();
 }

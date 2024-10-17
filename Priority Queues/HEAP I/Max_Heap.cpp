@@ -1,6 +1,7 @@
 #include <iostream>
+#include<climits>
 #include <vector>
-#include <string>
+#include <algorithm>
 using namespace std;
 class heap
 {
@@ -22,10 +23,48 @@ public:
     }
     void pop()
     {
+        //step 1
+        swap(vec[0],vec[vec.size()-1]);
+        //step 2
+        vec.pop_back();
+        //step 3
+        heapify(0,vec,vec.size());
+    }
+    void heapify(int i,vector<int>&vec,int n)
+    {
+        if(i>=vec.size())return;
+        int left=2*i+1;
+        int right=2*i+2;
+        int maxI=i;
+        if(left<n && vec[left]>vec[maxI])
+        {
+            maxI=left;
+        }
+        if(right<n && vec[right]>vec[maxI])
+        {
+            maxI=right;
+        }
+        if(maxI!=i)
+        {
+            swap(vec[i],vec[maxI]);
+            heapify(maxI,vec,n);
+        }
     }
     int top()
     {
         return vec[0];
+    }
+    int min()
+    {
+        int min=INT_MAX;
+        for(int ele:vec)
+        {
+            if(min>ele)
+            {
+                min=ele;
+            }
+        }
+        cout<<"Min: "<<min;
     }
     bool empty()
     {
@@ -39,5 +78,8 @@ int main()
     hp.push(-19);
     hp.push(89);
     hp.push(34);
-    cout<<hp.top();
+    cout<<hp.top()<<endl;
+    hp.pop();
+    hp.min();
+     cout<<endl<<hp.top();
 }
